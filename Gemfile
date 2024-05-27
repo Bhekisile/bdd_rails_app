@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 source 'https://rubygems.org'
 
 ruby '3.2.2'
@@ -10,6 +12,11 @@ gem 'sprockets-rails'
 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', '~> 1.4'
+
+# Use SCSS for stylesheets
+gem 'autoprefixer-rails', '~>6.3.7'
+gem 'bootstrap-sass', '~>3.3.6'
+gem 'sass-rails', '~> 5.0'
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem 'puma', '>= 5.0'
