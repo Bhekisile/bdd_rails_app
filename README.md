@@ -22,3 +22,7 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+Creating articles feature test
+- Write feature test and build features to make test pass one by one.
+Listing articles feature test
+- List the two articles and expect both articles to be present

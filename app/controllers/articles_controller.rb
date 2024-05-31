@@ -2,7 +2,9 @@
 
 # Articles controller method
 class ArticlesController < ApplicationController
-  def index; end
+  def index
+    @articles = Article.all
+  end
 
   def new
     @article = Article.new
