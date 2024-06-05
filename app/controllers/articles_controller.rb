@@ -2,7 +2,7 @@
 
 # Articles controller method
 class ArticlesController < ApplicationController
-  before_action :set_article, only: [:show, :edit, :update, :destroy]
+  before_action :set_article, only: %i[show edit update destroy]
 
   def index
     @articles = Article.all
@@ -38,10 +38,10 @@ class ArticlesController < ApplicationController
   end
 
   def destroy
-    if @article.destroy
-      flash[:success] = 'Article has been deleted'
-      redirect_to articles_path
-    end
+    return unless @article.destroy
+
+    flash[:success] = 'Article has been deleted'
+    redirect_to articles_path
   end
 
   protected
