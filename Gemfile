@@ -24,6 +24,11 @@ gem 'puma', '>= 5.0'
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
 gem 'importmap-rails'
 
+gem 'rubocop-capybara', '~> 2.21'
+gem 'rubocop-rails', '~> 2.25'
+gem 'rubocop-rspec', '~> 3.0', '>= 3.0.1'
+gem 'rubocop-rspec_rails', '~> 2.30'
+
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
 gem 'turbo-rails'
 
@@ -33,6 +38,7 @@ gem 'stimulus-rails'
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem 'jbuilder'
 
+gem 'devise', '~>4.9.3'
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"
 
@@ -58,7 +64,8 @@ group :development, :test do
 end
 
 group :test do
-  gem 'capybara', '2.7.1'
+  gem 'capybara'
+  gem 'selenium-webdriver'
 end
 
 group :development do
