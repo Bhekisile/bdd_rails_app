@@ -9,7 +9,6 @@ RSpec.describe 'Editing an article' do
 
   scenario 'A user updates an article' do
     visit '/'
-
     click_link @article.title
     click_link 'Edit Article'
 
