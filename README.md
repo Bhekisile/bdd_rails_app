@@ -27,3 +27,12 @@ Creating articles feature test
 Listing articles feature test
 - List the two articles and expect both articles to be present
 - Show the article title and details
+
+Articles belongs to users
+Users own articles
+one user can have many articles
+an article can only belong to one user
+foreign key of user_id in the article table
+
+Steps:
+- Create the spec
