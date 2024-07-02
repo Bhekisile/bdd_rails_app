@@ -27,3 +27,18 @@ Creating articles feature test
 Listing articles feature test
 - List the two articles and expect both articles to be present
 - Show the article title and details
+
+Articles belongs to users
+Users own articles
+one user can have many articles
+an article can only belong to one user
+foreign key of user_id in the article table
+
+Steps:
+- Create the spec
+
+- Hide the "New Article" button from non-signed in users
+- Hide the "Edit" and "Delete" buttons from non-owners of the article
+- Permit the owners to edit or delete their own articles
+
+Do the same restrict access (controller) for delete
