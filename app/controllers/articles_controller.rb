@@ -25,7 +25,9 @@ class ArticlesController < ApplicationController
     end
   end
 
-  def show; end
+  def show
+    @comment = @article.comments.build
+  end
 
   def edit
     return if @article.user == current_user

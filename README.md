@@ -42,3 +42,8 @@ Steps:
 - Permit the owners to edit or delete their own articles
 
 Do the same restrict access (controller) for delete
+
+Comments feature
+- create a branch
+- spec
+- building the functionality
