@@ -44,6 +44,6 @@ RSpec.feature 'Showing an article' do
     expect(current_path).to eq(article_path(@article))
 
     expect(page).to have_link('Edit Article')
-    expect(page).to have_link('Delete Article')
+    expect(page).to have_button('Delete Article')
   end
 end

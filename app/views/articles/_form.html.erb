@@ -1,6 +1,7 @@
 <div class="row">
   <div class="col-md-12">
     <%= form_for(@article, :html => {class: "form-horizontal", role: "form"}) do |f| %>
+    <%# <%= form.hidden_field :authenticity_token, value: form_authenticity_token %>
       <% if @article.errors.any? %>
       <div class="panel panel-danger col-md-offset-1">
         <div class="panel-heading">

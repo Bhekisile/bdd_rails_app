@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class AddUserToArticle < ActiveRecord::Migration[7.1]
   def change
     add_reference :articles, :user, foreign_key: true

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-# Articles controller method
+# Controller for the Articles
 class ArticlesController < ApplicationController
   before_action :authenticate_user!, except: %i[index show]
   before_action :set_article, only: %i[show edit update destroy]
@@ -25,19 +25,20 @@ class ArticlesController < ApplicationController
     end
   end
 
-  def show; end
+  def show
+    @comment = @article.comments.build
+    @comments = @article.comments
+  end
 
   def edit
     return if @article.user == current_user
+
     flash[:alert] = 'You can only edit your own article.'
     redirect_to root_path
   end
 
   def update
-    unless @article.user == current_user
-      flash[:alert] = 'You can only edit your own article.'
-      redirect_to root_path
-    else
+    if @article.user == current_user
       if @article.update(article_params)
         flash[:success] = 'Article has been updated'
         redirect_to @article
@@ -45,6 +46,9 @@ class ArticlesController < ApplicationController
         flash.now[:danger] = 'Article has not been updated'
         render :edit
       end
+    else
+      flash[:alert] = 'You can only edit your own article.'
+      redirect_to root_path
     end
   end
 

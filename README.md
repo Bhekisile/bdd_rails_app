@@ -42,3 +42,10 @@ Steps:
 - Permit the owners to edit or delete their own articles
 
 Do the same restrict access (controller) for delete
+
+Comments feature
+- create a branch
+- spec
+- building the functionality
+
+Action Cable seamlessly integrates WebSockets with the rest of your Rails application. It allows for real-time features to be written in Ruby in the same style and form as the rest of your Rails application, while still being performant and scalable.
