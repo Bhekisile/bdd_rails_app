@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-# This is the validation class
+# This is the article model
 class Article < ApplicationRecord
   validates :title, presence: true
   validates :body, presence: true
