@@ -14,4 +14,6 @@ Rails.application.routes.draw do
     # Defines the root path route ("/")
     # root "posts#index"
   end
+
+  mount ActionCable.server => '/cable'
 end
